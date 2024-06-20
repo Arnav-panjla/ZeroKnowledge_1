@@ -1,9 +1,8 @@
 import libnum
 import matplotlib.pyplot as plt
-
 # elliptical curve as y^2 = x^3 + 3 (mod 11)
 # generator is (4,10)
-def double(x, y, a, p): # to add a oint to itself
+def double(x, y, a, p): # to add a point to itself
     lambd = (((3 * x**2) % p ) *  pow(2 * y, -1, p)) % p
     newx = (lambd**2 - 2 * x) % p
     newy = (-lambd * newx + lambd * x - y) % p
