@@ -2,7 +2,7 @@ import libnum
 import matplotlib.pyplot as plt
 
 # defining the prime
-p = 51 
+p = 313
 
 # elliptical curve as y^2 = x^3 + 3 (mod p)
 # generator is (1,4)
@@ -47,8 +47,8 @@ def generate_points(mod):
 
 xs, ys = generate_points(p)
 
-print(xs)
-print(ys)
+# print(xs)
+# print(ys)
 
 fig, (ax1) = plt.subplots(1, 1);
 fig.suptitle('y^2 = x^3 + 3 (mod p)');
