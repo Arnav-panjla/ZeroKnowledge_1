@@ -49,4 +49,5 @@ ax1.set_xticks(range(0,11));
 ax1.set_yticks(range(0,11));
 plt.grid()
 plt.scatter(xs, ys)
+plt.show()
 
