@@ -40,12 +40,12 @@ def generate_points(mod):
                 xs.append(x)
     return xs , ys
 
-xs, ys = generate_points(11)
+xs, ys = generate_points(23)
 fig, (ax1) = plt.subplots(1, 1);
 fig.suptitle('y^2 = x^3 + 3 (mod p)');
 fig.set_size_inches(6, 6);
-ax1.set_xticks(range(0,11));
-ax1.set_yticks(range(0,11));
+ax1.set_xticks(range(0,23));
+ax1.set_yticks(range(0,23));
 plt.grid()
 plt.scatter(xs, ys)
 plt.show()
