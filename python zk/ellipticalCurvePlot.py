@@ -1,11 +1,13 @@
 import libnum
 import matplotlib.pyplot as plt
 
+# defining the prime
+p = 313
 
-
-# elliptical curve as y^2 = x^3 + 3 (mod 11)
-# generator is (4,10)
-def double(x, y, a, p): # to add a oint to itself
+# elliptical curve as y^2 = x^3 + 3 (mod p)
+# generator is (1,4)
+# for prime generator can be anything 
+def double(x, y, a, p): # to add a point to itself
     lambd = (((3 * x**2) % p ) *  pow(2 * y, -1, p)) % p
     newx = (lambd**2 - 2 * x) % p
     newy = (-lambd * newx + lambd * x - y) % p
@@ -43,12 +45,16 @@ def generate_points(mod):
                 xs.append(x)
     return xs , ys
 
-xs, ys = generate_points(11)
+xs, ys = generate_points(p)
+
+# print(xs)
+# print(ys)
+
 fig, (ax1) = plt.subplots(1, 1);
 fig.suptitle('y^2 = x^3 + 3 (mod p)');
-fig.set_size_inches(6, 6);
-ax1.set_xticks(range(0,11));
-ax1.set_yticks(range(0,11));
+fig.set_size_inches(13, 13);
+ax1.set_xticks(range(0,p));
+ax1.set_yticks(range(0,p));
 plt.grid()
 plt.scatter(xs, ys)
 plt.show()
