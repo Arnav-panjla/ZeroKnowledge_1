@@ -7,4 +7,4 @@ A = multiply(G1,5)
 B = multiply(G2,7)
 C = multiply(G1,5*7)
 
-print(pairing(A,B) == pairing(C,G2))
+print(pairing(B,A) == pairing(G2,C)) # G2 will come first in the argument of pairing function
